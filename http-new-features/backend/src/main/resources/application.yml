@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  error:
+    whitelabel:
+      enabled: false
+    include-binding-errors: always
+    include-message: always
+
+spring:
+  application:
+    name: 'PetClinic Service'
+
+petclinic:
+  auth:
+    jwt-certs-url: 'http://localhost:8085/auth/realms/petclinic/protocol/openid-connect/certs'
+    root-admin-emails:
+      - 'admin@example.com'
+
+logging:
+  level:
+    org.hibernate.validator: WARN
+  pattern:
+    console: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID:- }){magenta} %X{requestId} %clr(%X{auditId}){blue} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx'

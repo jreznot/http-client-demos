@@ -1,0 +1,2 @@
+GET http://{{host}}/users
+Accept: application/json

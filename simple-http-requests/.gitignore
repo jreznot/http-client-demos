@@ -1,0 +1,7 @@
+*.iml
+.idea/modules.xml
+.idea/libraries/
+.idea/kotlinc.xml
+.idea/jarRepositories.xml
+
+*.private.env.json

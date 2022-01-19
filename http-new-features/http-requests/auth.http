@@ -1,0 +1,14 @@
+### Get OAuth2 Token
+POST http://localhost:8085/auth/realms/petclinic/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+client_id=petclinic-service&username=pets.admin&password=toolboxpwd&grant_type=password&client_secret=bacd3019-c3b9-4b31-98d5-d3c410a1098e
+
+### Ping Server
+GET http://localhost:8080/api/ping
+
+### Get User Profile
+GET http://localhost:8080/api/users/me
+Authorization: Bearer {{access_token}}
+
+>> data.json

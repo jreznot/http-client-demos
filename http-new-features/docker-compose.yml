@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  #OAuth 2.0 Authentication Server
+  keycloak:
+    image: jboss/keycloak:14.0.0
+    volumes:
+    - ./keycloak/petclinic-realm.json:/tmp/petclinic-realm.json
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin
+      - KEYCLOAK_IMPORT=/tmp/petclinic-realm.json
+    ports:
+      - "8085:8080"

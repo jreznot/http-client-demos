@@ -1,0 +1,26 @@
+### List users
+GET http://localhost:8080/users
+Authorization: {{BearerToken}}
+
+### Create new user
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "name": "Peter Adams"
+}
+
+### Create new product
+POST http://localhost:8081/products
+Content-Type: application/json
+
+{
+  "title": "Apples",
+  "description": "Red fruits"
+}
+
+### List products
+GET http://localhost:8081/products
+
+### List payments
+GET http://localhost:8082/payments
